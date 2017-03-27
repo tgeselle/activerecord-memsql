@@ -6,11 +6,12 @@ Gem::Specification.new do |spec|
   spec.name          = "activerecord-memsql"
   spec.version       = '1.0.0'
   spec.authors       = ["Thomas Geselle"]
-  spec.email         = ["thomas@cpcstrategy.com"]
+  spec.email         = ["thomas@geselle.fr"]
 
-  spec.summary       = "TEST"
-  spec.description   = "TEST"
-  spec.homepage      = "https://goog.fr"
+  spec.summary       = "ActiveRecord MemSQL Adapter"
+  spec.description   = "The ActiveRecod MemSQL Adapter is an ActiveRecord connection adapter based on the standard mysql2 adapter.
+This adapter is a customized version of the mysql2 adapter to provide support for MemSQL. "
+  spec.homepage      = "https://github.com/tgeselle/activerecord-memsql"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
