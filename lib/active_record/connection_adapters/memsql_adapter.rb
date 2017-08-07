@@ -23,7 +23,7 @@ module ActiveRecord
       end
 
       client = Mysql2::Client.new(config)
-      ConnectionAdapters::Mysql2Adapter.new(client, logger, nil, config)
+      ConnectionAdapters::MemsqlAdapter.new(client, logger, nil, config)
     rescue Mysql2::Error => error
       if error.message.include?("Unknown database")
         raise ActiveRecord::NoDatabaseError
