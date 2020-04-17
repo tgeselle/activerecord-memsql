@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "active_record/connection_adapters/abstract_mysql_adapter"
 require "active_record/connection_adapters/mysql2_adapter"
 require "active_record/connection_adapters/mysql/database_statements"
@@ -17,7 +19,7 @@ module ActiveRecord
       config[:variables] = {sql_mode: ''} if config[:variables].nil?
 
       if config[:flags].kind_of? Array
-        config[:flags].push "FOUND_ROWS".freeze
+        config[:flags].push "FOUND_ROWS"
       else
         config[:flags] |= Mysql2::Client::FOUND_ROWS
       end
@@ -35,7 +37,7 @@ module ActiveRecord
 
   module ConnectionAdapters
     class MemsqlAdapter < AbstractMysqlAdapter
-      ADAPTER_NAME = "MemSQL".freeze
+      ADAPTER_NAME = "MemSQL"
 
       include MySQL::DatabaseStatements
 
