@@ -113,6 +113,12 @@ module ActiveRecord
         @connection.close
       end
 
+      def discard! # :nodoc:
+        super
+        @connection.automatic_close = false
+        @connection = nil
+      end
+
       private
 
         def connect
