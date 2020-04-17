@@ -46,7 +46,7 @@ module ActiveRecord
       end
 
       def supports_json?
-        !mariadb? && version >= "5.7.8"
+        !mariadb? && database_version >= "5.7.8"
       end
 
       def supports_comments?
@@ -134,7 +134,11 @@ module ActiveRecord
         end
 
         def full_version
-          @full_version ||= @connection.server_info[:version]
+          schema_cache.database_version.full_version_string
+        end
+
+        def get_full_version
+          @connection.server_info[:version]
         end
     end
   end
