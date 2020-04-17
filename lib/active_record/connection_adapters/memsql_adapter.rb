@@ -61,6 +61,10 @@ module ActiveRecord
         true
       end
 
+      def supports_lazy_transactions?
+        true
+      end
+
       def supports_advisory_locks?
         false
       end
