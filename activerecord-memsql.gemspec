@@ -32,6 +32,6 @@ This adapter is a customized version of the mysql2 adapter to provide support fo
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"
 
-  spec.add_dependency "activerecord", ">= 6.0.0"
+  spec.add_dependency "activerecord", ">= 5.1"
   spec.add_dependency "mysql2", ">= 0.4.4"
 end
