@@ -36,6 +36,7 @@ module ActiveRecord
       ADAPTER_NAME = 'MemSQL'.freeze
 
       include MySQL::DatabaseStatements
+      include ActiveRecord::Import::MemsqlAdapter
 
       def initialize(connection, logger, connection_options, config)
         superclass_config = config.reverse_merge(prepared_statements: false)
